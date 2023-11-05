@@ -4,7 +4,7 @@ import "./style.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
+import { FaDownload, FaFileContract, FaLink, FaMailBulk, FaPhone, FaQrcode, FaTextHeight, FaVoicemail } from "react-icons/fa";
 export default function Home() {
   const [qrType, setQRType] = useState("text");
   const [inputValue, setInputValue] = useState("");
@@ -22,7 +22,7 @@ export default function Home() {
   const [qrStyle, setQRStyle] = useState({
     fgColor: "#000",
     bgColor: "#fff",
-    size: 200,
+    size: 250,
     level: "L",
   });
 
@@ -62,7 +62,6 @@ END:VCARD`;
       setQRCode(vcardString);
     }
   };
-
   const downloadQRCode = () => {
     const canvas = document.querySelector("canvas");
     const qrCodeURL = canvas.toDataURL("image/png");
@@ -85,28 +84,27 @@ END:VCARD`;
                     } `}
                   onClick={() => handleTypeChange("text")}
                 >
-                  Text
-                </button>
+                 <FaTextHeight/> Text </button>
                 <button
                   className={`btn ${qrType === "email" ? "btn-primary" : "btn-light"
                     } `}
                   onClick={() => handleTypeChange("email")}
                 >
-                  Email
+                  <FaMailBulk/>  Email
                 </button>
                 <button
                   className={`btn ${qrType === "url" ? "btn-primary" : "btn-light"
                     } `}
                   onClick={() => handleTypeChange("url")}
                 >
-                  URL
+                 <FaLink/>   URL
                 </button>
                 <button
                   className={`btn ${qrType === "vcard" ? "btn-primary" : "btn-light"
                     } `}
                   onClick={() => handleTypeChange("vcard")}
                 >
-                  Vcard
+                  <FaPhone/> Vcard 
                 </button>
               </div>
             </div>
@@ -175,8 +173,8 @@ END:VCARD`;
                 <div>
 
                   <input
-                  placeholder="First Name"
-                  type="text"
+                    placeholder="First Name"
+                    type="text"
                     className="text-input-email"
                     id="vname"
                     value={vcardData.vname}
@@ -226,7 +224,7 @@ END:VCARD`;
               ""
             )}
             <button onClick={generateQRCode} className="btn btn-primary">
-              Generate QR
+            <FaQrcode/> Text  Generate QR
             </button>
           </Col>
           <Col>
@@ -246,7 +244,7 @@ END:VCARD`;
                 onClick={downloadQRCode}
                 className="btn btn-primary"
               >
-                Download QR Code
+               <FaDownload/>   Download QR Code
               </button>
             )}
           </Col>
