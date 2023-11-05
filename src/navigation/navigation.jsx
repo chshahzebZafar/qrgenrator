@@ -26,9 +26,9 @@ function Navigation() {
                     <div className="nav-links">
                         <Link to="/" className='a'>Home </Link>
                         <div className="dropdown">
-                            <span className="dropdown-label"> <FaTools/> Tools</span>
+                            <span className="dropdown-label"> <FaTools /> Tools</span>
                             <div className="dropdown-content">
-                                <Link to="/" className='a' > <FaQrcode/> QR Code</Link>
+                                <Link to="/Qrcode" className='a' > <FaQrcode /> QR Code</Link>
                                 <Link to="/Contact" className='a' >Others</Link>
                             </div>
                         </div>
