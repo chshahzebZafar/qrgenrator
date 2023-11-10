@@ -1,0 +1,82 @@
+.HeaderAreaBox{
+    /* background-image: linear-gradient(to right top,  #141e30,   #243b55); */
+    height: 700px;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    
+}
+.headerArea h1{
+    /* color: #f2f2f2; */
+    color: #202020;
+    font-weight: 600;
+    font-size: 10vh;
+  }  
+.headerArea p{
+    /* color: #f4f4f4; */
+    color: #d2d2d2;
+    letter-spacing: 1px;
+    font-weight: 200;
+    word-spacing: 2px;
+    text-align: justify;
+    font-family: sans-serif;
+  }
+  .headerArea span{
+    color:orange;
+  }
+  section{
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .ToolsHeading h1{
+    text-align: center;
+    font-weight: 600;
+    color: #353935;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    font-size: 7vh;
+  }
+  .toolsCard{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    /* justify-content: space-around;    */
+    
+  }
+  .card{
+    /* height: 200px !important; */
+    margin-top: 20px;
+    width: 250px;
+    margin-left: 20px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .card-head{
+    /* background-color: red; */
+    /* height: 200px !important; */
+    font-size: 30px;
+    /* font-weight: 100; */
+  }
+  .card-body{
+    /* font-weight: ; */
+    font-size: 20px;
+  }
+  .ToolsDetails{
+    justify-content: center;
+    align-items: center;
+    /* display: flex;
+    height: 400px; */
+  }
+  .ToolsDetails h1{
+    margin-top: 100px;
+    /* text-align: center; */
+    font-weight: 600;
+    color: #353935;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    font-size: 6vh;
+  }

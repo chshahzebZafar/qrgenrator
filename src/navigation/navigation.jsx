@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './style.css'; // Import the CSS file
-import { Container } from 'react-bootstrap';
+import { Badge, Container } from 'react-bootstrap';
 import { FaQrcode, FaTools } from "react-icons/fa";
 
 function Navigation() {
@@ -28,8 +28,8 @@ function Navigation() {
                         <div className="dropdown">
                             <span className="dropdown-label"> <FaTools /> Tools</span>
                             <div className="dropdown-content">
-                                <Link to="/Qrcode" className='a' > <FaQrcode /> QR Code</Link>
-                                <Link to="/Contact" className='a' >Others</Link>
+                                <Link to="/Qrcode" className='a' > <FaQrcode /> QR Code <Badge>New</Badge></Link>
+                                {/* <Link to="/Contact" className='a' >Others</Link> */}
                             </div>
                         </div>
                         <Link to="/about" className='a' >About</Link>
