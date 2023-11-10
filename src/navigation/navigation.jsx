@@ -1,13 +1,12 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 import './style.css'; // Import the CSS file
 import { Badge, Container } from 'react-bootstrap';
 import { FaQrcode, FaTools } from "react-icons/fa";
 
 function Navigation() {
     // Get the current location for active link styling
-    const location = useLocation();
-
+   
     return (
         <div className='navigationBar'>
             <Container>
