@@ -31,8 +31,8 @@ function Navigation() {
                                 {/* <Link to="/Contact" className='a' >Others</Link> */}
                             </div>
                         </div>
-                        <Link to="/about" className='a' >About</Link>
-                        <Link to="/contact" className='a' >Contact</Link>
+                        {/* <Link to="/about" className='a' >About</Link> */}
+                        {/* <Link to="/contact" className='a' >Contact</Link> */}
                     </div>
                 </div>
             </Container>
