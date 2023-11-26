@@ -328,10 +328,10 @@ export default function Qrcode() {
                     style={{ border: 'solid 4px black', padding: '20px', boxShadow: '0px 10px 10px rgba(0,0,0,.2)' }}
                     padding={300}
                     value={qrCode}
-                    size={qrStyle.size}
-                    fgColor={qrStyle.fgColor}
-                    bgColor={qrStyle.bgColor}
-                    level={qrStyle.level}
+                    size={250}
+                    fgColor={'#000'}
+                    bgColor={'#fff'}
+                    level={'L'}
                   />
                   <QRCodeDesign qrStyle={qrStyle} setQRStyle={setQRStyle} />
                 </>
