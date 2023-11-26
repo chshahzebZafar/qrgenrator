@@ -23,12 +23,12 @@ export default function Qrcode() {
 
   const [facebookUsername, setFacebookUsername] = useState("");
   const [whatsAppBody, setwhatsAppBody] = useState("");
-  const [qrStyle, setQRStyle] = useState({
-    fgColor: "#000",
-    bgColor: "#fff",
-    size: 250,
-    level: "L",
-  });
+  // const [qrStyle, setQRStyle] = useState({
+  //   fgColor: "#000",
+  //   bgColor: "#fff",
+  //   size: 250,
+  //   level: "L",
+  // });
 
   const handleTypeChange = (type) => {
     setQRType(type);
@@ -68,7 +68,7 @@ export default function Qrcode() {
       END:VCARD`;
       setQRCode(vcardString);
     }
-    else if (qrType === "whatsApp" && inputValue, whatsAppBody) {
+    else if (qrType === "whatsApp" && inputValue && whatsAppBody) {
       // const helloText = "Hello"; // Your hello text here
       const whatsAppData = `https://wa.me/${encodeURIComponent(inputValue)}?text=${encodeURIComponent(whatsAppBody)}`;
       setQRCode(whatsAppData);
@@ -326,10 +326,10 @@ export default function Qrcode() {
                   <QRCode 
                     padding={300}
                     value={qrCode}
-                    size={qrStyle.size}
-                    fgColor={qrStyle.fgColor}
-                    bgColor={qrStyle.bgColor}
-                    level={qrStyle.level}
+                    size={250}
+                    fgColor={'#000'}
+                    bgColor={'#fff'}
+                    level={'L'}
                   />
                 </>
               )

@@ -21,7 +21,7 @@ function Home() {
             </Col>
             <Col>
               <div className="text-center">
-                <img src={header} style={{height:'500px', width:'500px'}}/>
+                <img src={header} style={{height:'500px', width:'500px'}} alt='Images Goes Her'/>
               </div>
             </Col>
           </Row>
@@ -84,7 +84,7 @@ function Home() {
             </Col>
             <Col>
               <div className="text-center">
-                <img src={qr1} style={{height:'500px', width:'500px'}}/>
+                <img src={qr1} style={{height:'500px', width:'500px'}} alt='Images Goes Her' />
               </div>
             </Col>
           </Row>
@@ -92,7 +92,7 @@ function Home() {
             
             <Col>
               <div className="text-center">
-                <img src={qr2} style={{height:'500px', width:'500px'}}/>
+                <img src={qr2} style={{height:'500px', width:'500px'}} alt='Images Goes Her'/>
               </div>
             </Col>
             <Col>
