@@ -4,6 +4,7 @@ import "./style.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import QRCodeDesign from "../../components/Buttons/designQRCode";
 import { FaDownload, FaFacebook, FaLink, FaMailBulk, FaPhone, FaQrcode, FaTextHeight, FaTwitter, FaWhatsapp } from "react-icons/fa";
 export default function Qrcode() {
   const [qrType, setQRType] = useState("text");
@@ -20,15 +21,14 @@ export default function Qrcode() {
   const [email, setEmail] = useState("");
   const [emailSubject, setEmailSubject] = useState("");
   const [emailBody, setEmailBody] = useState("");
-
   const [facebookUsername, setFacebookUsername] = useState("");
   const [whatsAppBody, setwhatsAppBody] = useState("");
-  // const [qrStyle, setQRStyle] = useState({
-  //   fgColor: "#000",
-  //   bgColor: "#fff",
-  //   size: 250,
-  //   level: "L",
-  // });
+  const [qrStyle, setQRStyle] = useState({
+    fgColor: "#000",
+    bgColor: "#fff",
+    size: 300,
+    level: "L",
+  });
 
   const handleTypeChange = (type) => {
     setQRType(type);
@@ -69,7 +69,6 @@ export default function Qrcode() {
       setQRCode(vcardString);
     }
     else if (qrType === "whatsApp" && inputValue && whatsAppBody) {
-      // const helloText = "Hello"; // Your hello text here
       const whatsAppData = `https://wa.me/${encodeURIComponent(inputValue)}?text=${encodeURIComponent(whatsAppBody)}`;
       setQRCode(whatsAppData);
     }
@@ -90,6 +89,7 @@ export default function Qrcode() {
     a.download = "qrcode.png";
     a.click();
   };
+
 
   return (
     <div className="qrPage">
@@ -309,8 +309,8 @@ export default function Qrcode() {
                         />
                       </div>
                     )
-                    :
-                    ""
+                      :
+                      ""
               }
             </div>
             <div style={{ marginTop: '50px' }}>
@@ -320,10 +320,12 @@ export default function Qrcode() {
           </Col>
           <Col>
             <div style={{ textAlign: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+
               {qrCode && (
                 <>
                   {/* <h2 className="qrCodeHeading">QR Code</h2> */}
-                  <QRCode 
+                  <QRCode
+                    style={{ border: 'solid 4px black', padding: '20px', boxShadow: '0px 10px 10px rgba(0,0,0,.2)' }}
                     padding={300}
                     value={qrCode}
                     size={250}
@@ -331,9 +333,11 @@ export default function Qrcode() {
                     bgColor={'#fff'}
                     level={'L'}
                   />
+                  <QRCodeDesign qrStyle={qrStyle} setQRStyle={setQRStyle} />
                 </>
               )
               }
+
               <br></br>
               {qrCode && (
                 <button
