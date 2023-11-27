@@ -3,8 +3,8 @@ import React, { useState } from "react";
 const QRCodeDesign = ({ qrStyle, setQRStyle }) => {
   const colorOptions = ['red', 'blue', 'green', 'yellow', 'purple',];
   const [selectedColor, setSelectedColor] = useState('');
+  console.log(selectedColor)
   const [customColor, setCustomColor] = useState('#000'); 
-
   const changeColor = (color) => {
     setSelectedColor(color);
     setQRStyle({ ...qrStyle, fgColor: color });
