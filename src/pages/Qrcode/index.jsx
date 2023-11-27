@@ -10,6 +10,7 @@ export default function Qrcode() {
   const [qrType, setQRType] = useState("text");
   const [inputValue, setInputValue] = useState("");
   const [qrCode, setQRCode] = useState("");
+  console.log(qrCode, "dflkskfdskjfs")
   const [websiteLink, setWebsiteLink] = useState("");
   const [twitterUsername, setTwitterUsername] = useState("");
   const [vcardData, setVCardData] = useState({
@@ -89,12 +90,10 @@ export default function Qrcode() {
     a.download = "qrcode.png";
     a.click();
   };
-
-
   return (
     <div className="qrPage">
       <Container className="boxStyling">
-        <h1 className="topHeading">Generate QR Code</h1>
+        {/* <h1 className="topHeading">Generate QR Code</h1> */}
         <Row>
           <Col style={{ padding: 10, }}>
             {/* <div className="buttonGroup"> */}
@@ -319,36 +318,36 @@ export default function Qrcode() {
             </div>
           </Col>
           <Col>
-            <div style={{ textAlign: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-
-              {qrCode && (
-                <>
-                  {/* <h2 className="qrCodeHeading">QR Code</h2> */}
-                  <QRCode
-                    style={{ border: 'solid 4px black', padding: '20px', boxShadow: '0px 10px 10px rgba(0,0,0,.2)' }}
-                    padding={300}
-                    value={qrCode}
-                    size={250}
-                    fgColor={'#000'}
-                    bgColor={'#fff'}
-                    level={'L'}
-                  />
-                  <QRCodeDesign qrStyle={qrStyle} setQRStyle={setQRStyle} />
-                </>
-              )
-              }
-
-              <br></br>
-              {qrCode && (
-                <button
-                  style={{ alignItems: 'center' }}
-                  onClick={downloadQRCode}
-                  className="btn btn-primary"
-                >
-                  <FaDownload />   Download QR Code
-                </button>
-              )}
-            </div>
+           
+                <div style={{ textAlign: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                  {qrCode ? (
+                    <>
+                      <QRCode
+                        style={{ border: 'solid 4px black', borderRadius: '5px', padding: '20px', boxShadow: '0px 10px 10px rgba(0,0,0,.2)' }}
+                        padding={10}
+                        value={qrCode}
+                        size={250}
+                        fgColor={qrStyle.fgColor} // Pass the selected color to fgColor
+                        bgColor={'#fff'}
+                        level={'L'}
+                      />
+                      <br />
+                      <QRCodeDesign qrStyle={qrStyle} setQRStyle={setQRStyle} />
+                    </>
+                  ) : (
+                    <p>No QR code generated</p>
+                  )}
+                  <br />
+                  {qrCode && (
+                    <button
+                      style={{ alignItems: 'center' }}
+                      onClick={downloadQRCode}
+                      className="btn btn-primary"
+                    >
+                      <FaDownload /> Download QR Code
+                    </button>
+                  )}
+                </div>
           </Col>
         </Row>
       </Container>
