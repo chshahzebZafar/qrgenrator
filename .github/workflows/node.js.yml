@@ -5,7 +5,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "release1.1" ]
+    branches: [ "main" ]
  
 
 jobs:
