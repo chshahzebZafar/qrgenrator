@@ -14,7 +14,7 @@ function Home() {
           <Row>
             <Col>
               <div className='headerArea'>
-                <h1>Simplify<span>.</span> Optimize<span>.</span> Create<span>.</span></h1>
+                <h1>Updated Code<span>.</span> Optimize<span>.</span> Create<span>.</span></h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto rem voluptates repudiandae alias amet voluptatibus perspiciatis nesciunt voluptate placeat enim nemo eos sunt ut, dolorem, dicta temporibus magni dolores.</p>
                 <button className='btn btn-primary'><FaLink /> Explore More.</button>
               </div>
