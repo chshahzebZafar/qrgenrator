@@ -5,15 +5,16 @@ import { Badge, Container } from 'react-bootstrap';
 import { FaQrcode, FaTools } from "react-icons/fa";
 
 function Navigation() {
-    // Get the current location for active link styling
-   
     return (
         <div className='navigationBar'>
             <Container>
                 <div className="nav">
                     <input type="checkbox" id="nav-check" />
                     <div className="nav-header">
-                        <div className="nav-title">CodeGenerator</div>
+                        <Link to="/" className='a' >
+                            <div className="nav-title"><h3 className="headerLogo">ToolsWebsite</h3>
+                            </div>
+                        </Link>
                     </div>
                     <div className="nav-btn">
                         <label htmlFor="nav-check">
@@ -23,11 +24,13 @@ function Navigation() {
                         </label>
                     </div>
                     <div className="nav-links">
-                        <Link to="/" className='a'>Home </Link>
                         <div className="dropdown">
                             <span className="dropdown-label"> <FaTools /> Tools</span>
                             <div className="dropdown-content">
                                 <Link to="/Qrcode" className='a' > <FaQrcode /> QR Code <Badge>New</Badge></Link>
+                                <Link to="/TextCompare" className='a' > <FaQrcode /> Text-Compare <Badge>New</Badge></Link>
+                                <Link to="/Qrcode" className='a' > <FaQrcode /> Css <Badge>New</Badge></Link>
+                               
                                 {/* <Link to="/Contact" className='a' >Others</Link> */}
                             </div>
                         </div>

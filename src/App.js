@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Qrcode from './pages/Qrcode/index';
-import About from './pages/About/Index'; // Adjust the import path as per your project structure
+import About from './pages/About/Index';
 import Navigation from './navigation/navigation';
 import Contact from './pages/Contact';
 import Home from '../src/pages/Home/index';
-
+import TextCompare from './pages/Textcompare';
 function App() {
   return (
     <div className="App">
@@ -15,7 +15,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Qrcode" element={<Qrcode />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/TextCompare" element={<TextCompare />} />
         </Routes>
       </Router>
     </div>
