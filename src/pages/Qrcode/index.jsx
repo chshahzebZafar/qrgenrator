@@ -10,7 +10,6 @@ export default function Qrcode() {
   const [qrType, setQRType] = useState("text");
   const [inputValue, setInputValue] = useState("");
   const [qrCode, setQRCode] = useState("");
-  console.log(qrCode, "dflkskfdskjfs")
   const [websiteLink, setWebsiteLink] = useState("");
   const [twitterUsername, setTwitterUsername] = useState("");
   const [vcardData, setVCardData] = useState({
