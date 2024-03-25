@@ -12,9 +12,9 @@ function Footer() {
             {/* <img src="/path/to/logo.png" alt="Logo" /> */}
           </div>
           <div className="social-icons">
-            <a href="#" className="social-icon"><FaFacebookF /></a>
-            <a href="#" className="social-icon"><FaTwitter /></a>
-            <a href="#" className="social-icon"><FaInstagram /></a>
+            <a href='https://www.google.com' className="social-icon"><FaFacebookF /></a>
+            <a href='https://www.google.com' className="social-icon"><FaTwitter /></a>
+            <a href='https://www.google.com' className="social-icon"><FaInstagram /></a>
             {/* Add more social icons as needed */}
           </div>
         </div>

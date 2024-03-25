@@ -1,7 +1,7 @@
 import React from 'react'
 // import MdButton from '../../components/Buttons/mdbutton'
 import { Col, Container, Row } from 'react-bootstrap'
-import { FaLink, FaMoneyBillWaveAlt, FaQrcode, FaTextHeight, FaWaveSquare } from 'react-icons/fa'
+import { FaLink, FaQrcode, FaTextHeight, FaWaveSquare } from 'react-icons/fa'
 import header from '../../Assets/Images/header.png'
 import qr1 from '../../Assets/Images/qr1.png'
 import qr2 from '../../Assets/Images/qr2.svg'
