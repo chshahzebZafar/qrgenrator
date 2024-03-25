@@ -2,3 +2,24 @@
     margin: 0;
     padding: 0;
 }
+.AboutUseSection{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.about-image{
+    min-width: 600px;   
+    max-width: 600px;
+    border-radius: 10px;
+    border: solid 4px #ddd;
+}
+
+.about-content-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; Optionally, to center text content */
+}
+.about-heading{
+    font-size: 3em;
+    font-weight: bold;
+}

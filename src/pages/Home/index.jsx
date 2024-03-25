@@ -1,10 +1,10 @@
 import React from 'react'
 // import MdButton from '../../components/Buttons/mdbutton'
 import { Col, Container, Row } from 'react-bootstrap'
-import { FaLink, FaQrcode } from 'react-icons/fa'
+import { FaLink, FaMoneyBillWaveAlt, FaQrcode, FaTextHeight, FaWaveSquare } from 'react-icons/fa'
 import header from '../../Assets/Images/header.png'
 import qr1 from '../../Assets/Images/qr1.png'
-import qr2 from '../../Assets/Images/qr2.png'
+import qr2 from '../../Assets/Images/qr2.svg'
 import './style.css'
 function Home() {
   return (
@@ -40,28 +40,12 @@ function Home() {
             <div className='card-body'>QRCode</div>
           </div>
           <div className='card'>
-            <div className="card-head"><FaQrcode/></div>
-            <div className='card-body'>QRCode</div>
+            <div className="card-head"><FaTextHeight/></div>
+            <div className='card-body'>TextCompare</div>
           </div>
           <div className='card'>
-            <div className="card-head"><FaQrcode/></div>
-            <div className='card-body'>QRCode</div>
-          </div>
-          <div className='card'>
-            <div className="card-head"><FaQrcode/></div>
-            <div className='card-body'>QRCode</div>
-          </div>
-          <div className='card'>
-            <div className="card-head"><FaQrcode/></div>
-            <div className='card-body'>QRCode</div>
-          </div>
-          <div className='card'>
-            <div className="card-head"><FaQrcode/></div>
-            <div className='card-body'>QRCode</div>
-          </div>
-          <div className='card'>
-            <div className="card-head"><FaQrcode/></div>
-            <div className='card-body'>QRCode</div>
+            <div className="card-head"><FaWaveSquare/></div>
+            <div className='card-body'>Waves Designer</div>
           </div>
         </div>
         </Container>
@@ -97,7 +81,7 @@ function Home() {
             </Col>
             <Col>
               <div className='ToolsDetails'>
-                <h1>QR Code Generator<span>.</span></h1>
+                <h1>Live Text Compare<span>.</span></h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto rem voluptates repudiandae alias amet voluptatibus perspiciatis nesciunt voluptate placeat enim nemo eos sunt ut, dolorem, dicta temporibus magni dolores.</p>
                 <button className='btn btn-primary'><FaLink /> Explore More.</button>
               </div>
