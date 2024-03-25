@@ -6,6 +6,7 @@ import Navigation from './navigation/navigation';
 import Contact from './pages/Contact';
 import Home from '../src/pages/Home/index';
 import TextCompare from './pages/Textcompare';
+import Footer from './pages/Footer';
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/TextCompare" element={<TextCompare />} />
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );
